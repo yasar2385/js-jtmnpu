@@ -103,12 +103,12 @@ const NUMERIC_REGEXP = /[\d]{4}/g;
 
 const numbers = '2.2px 3.1px 4px -7.6px obj.key'.match(NUMERIC_REGEXP);
 
-console.log(numbers);
+//console.log(numbers);
 
-const YEAR_REGEX = /\d{4}[\–\d{4}]?/gi;
+const YEAR_REGEX = /\d{4}[\–]?[\d{2,4}]?/gi;
 ['Wolf, 1974a', 'Wolf (1974a)', '(Wolf, 1974–1795)'].forEach(function (item) {
   let reg = item.match(NUMERIC_REGEXP);
-  console.log(reg);
+  //console.log(reg);
   let reg1 = item.match(YEAR_REGEX);
   console.log(reg1);
 });
